@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>化工日报 | 2026年7月1日复盘</title>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{--primary:#1a1a2e;--accent:#0f3460;--green:#00b894;--red:#d63031;--grey:#636e72;--bg:#f8f9fa;--card:#ffffff;--border:#e6e9ee}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;background:var(--bg);color:var(--primary);line-height:1.65;padding:24px}
+.container{max-width:1200px;margin:0 auto}
+header{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:32px;border-radius:12px;margin-bottom:24px;box-shadow:0 6px 24px rgba(0,0,0,.08)}
+header h1{font-size:26px;font-weight:700}
+header .sub{margin-top:6px;font-size:14px;opacity:.85}
+section{background:var(--card);border-radius:12px;padding:24px;margin-bottom:20px;box-shadow:0 2px 10px rgba(0,0,0,.05)}
+h2{font-size:18px;margin-bottom:14px;color:var(--accent);padding-left:10px;border-left:4px solid var(--accent)}
+h3{font-size:15px;margin:14px 0 8px;color:var(--primary)}
+.summary-box{background:#f2f6fb;border-left:4px solid var(--accent);padding:14px 18px;border-radius:8px;margin-bottom:12px;font-size:14px}
+.summary-box p{margin-bottom:6px}
+.summary-box .label{color:var(--accent);font-weight:600;margin-right:4px}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:12px;margin:14px 0}
+.metric-card{background:#fafbfc;border:1px solid var(--border);border-radius:8px;padding:12px;text-align:center}
+.metric-card .name{font-size:13px;color:var(--grey)}
+.metric-card .val{font-size:18px;font-weight:700;margin-top:4px}
+.up{color:var(--red)}
+.down{color:var(--green)}
+table{width:100%;border-collapse:collapse;margin-top:10px;font-size:13px}
+th,td{border:1px solid var(--border);padding:8px 10px;text-align:left}
+th{background:#f2f6fb;color:var(--accent);font-weight:600}
+tr:nth-child(even){background:#fbfcfd}
+.tag-up{display:inline-block;padding:2px 8px;border-radius:4px;background:#ffeaea;color:var(--red);font-size:12px;font-weight:600}
+.tag-down{display:inline-block;padding:2px 8px;border-radius:4px;background:#e5f9f2;color:var(--green);font-size:12px;font-weight:600}
+.event-item{border-left:3px solid var(--accent);padding:8px 12px;margin-bottom:8px;background:#f9fafc;border-radius:0 6px 6px 0;font-size:14px}
+.event-item .date{color:var(--grey);font-size:12px;margin-right:6px}
+.analyst-card{border:1px solid var(--border);border-radius:8px;padding:12px;margin-bottom:10px;background:#fbfcfe}
+.analyst-card .head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.analyst-card .broker{font-weight:600;color:var(--accent);font-size:14px}
+.analyst-card .theme{font-size:12px;color:var(--grey)}
+.chart-wrap{position:relative;height:340px;margin:10px 0}
+footer{text-align:center;color:var(--grey);font-size:12px;padding:20px 0 4px}
+@media (max-width:640px){body{padding:12px}header h1{font-size:20px}h2{font-size:16px}}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+<h1>化工日报 | 2026年7月2日（复盘7月1日）</h1>
+<div class="sub">数据来源：iFinD · 卓创资讯 · AlphaPai · AceCamp · 公开财经资讯 · 数据截至2026-07-01收盘</div>
+</header>
+
+<!-- Section 0: 执行摘要 -->
+<section>
+<h2>◆ 执行摘要</h2>
+<div class="summary-box">
+<p><span class="label">全球：</span>A股指数分化，上证+0.44%（金融/周期红盘），深成指-0.53%、创业板指-1.89%（科技高位调整）；沪深300-0.41%、科创50-2.48%、北证50+1.10%；核心驱动为半年报预喜+中东地缘缓和油价回落+"反内卷"化工景气修复。</p>
+<p><span class="label">化工板块：</span>申万基础化工整体走强（个股均值+2.81%），化工行业ETF易方达+1.09%、化工ETF鹏华+2.9%；氟化工/氢氟酸/制冷剂、磷化工、涂料油墨、树脂/离子交换资源为主线；氟化工与磷化工领涨，膜材料/塑料制品逆势领跌。</p>
+<p><span class="label">涨跌停与异动股：</span>基础化工涨停约25只（多氟多、三美股份、昊华科技、蓝晓科技、金浦钛业、闰土股份、百川股份、联创股份、和远气体、金石资源、六国化工、百傲化学、天洋新材、福莱新材、争光股份、肯特催化、杭华股份、鲁银投资、*ST柳化等），跌停1只（浙江众成-10.04%）；涨幅榜大禹生物+26.83%、阳谷华泰/蓝晓科技/杭华股份/争光股份/横河精密/联创股份齐涨20%；跌幅榜瑞华泰-9.04%、中复神鹰-8.03%、世名科技-7.80%、沃顿科技-7.11%、彤程新材-5.60%、联瑞新材-5.48%。</p>
+<p><span class="label">大事件：</span>①卓创资讯本周（6/24-7/1）：丙烯+7.07%、苯酚+2.53%、TDI+1.81%、硫酸98%+1.65%、磷酸一铵+0.28%领涨；丙烯酸-10.84%、DMC-7.12%、丁二烯-6.97%、甲醇-6.90%、H酸-4.58%领跌；②卫星化学预告2026H1净利60-70亿元（同比+118.68%~155.13%）、恒逸石化预告净利55-60亿元（同比+2326%~2547%），龙头业绩打破化工悲观预期；③川恒股份广西鹏越磷酸装置由20万吨技改扩至40万吨；④中矿资源锂业3万吨高纯锂盐产线6/30起停产检修、3.5万吨产线7/11起低负荷；⑤湖北绿氟新材料武穴项目备案通过（15.93亿元，六氟磷酸锂3万吨/年）；⑥科思创上海筹建66万吨MDI，东曹瑞安8万吨MDI 7月底检修；⑦贵阳市政协调研开阳"磷-钛-铁-锂"耦合循环项目。</p>
+<p><span class="label">卖方主线（内资）：</span>华福证券——基础化工新材料周报，看好彤程新材（光刻胶）、华特气体（电子特气）、安集科技/鼎龙股份（电子化学品）、国瓷材料（新材料平台）；中邮证券——磷化工估值重估（云天化、兴发集团、湖北宜化）；申万宏源——新安股份深度（草甘膦+硅基新材料）、东方盛虹（民营大炼化）；华创证券——元利科技（PCDL固态电池材料）；招商证券——合成生物学（华恒生物）；开源证券——翰博高新切入湿化学品。</p>
+<p><span class="label">卖方主线（外资）：</span>①摩根士丹利——化工周更《Weekly Chains Update》聚焦美国产能扩张与尿素/磷肥回落；②摩根大通——《2026 Mid-Year Outlook》高等级/高收益化工债展望及化工与包装可比估值；③Jefferies——PI Industries海外NDR纪要（创新平台）、3M "Outpacing The Mixed Environment"；④野村证券——日本制铁AGM点评（美HRC假设$1,050/t偏低）。</p>
+<p><span class="label">专家库纪要（AlphaPai公司IR / AceCamp专家调研）：</span>①巨化股份（2026/06/26 IR）——制冷剂出口受地缘扰动，国际库存低位，英美放缓HFCs淘汰，三代制冷剂供给或紧张；②AceCamp三代制冷剂（6/23-24）——18.53亿吨CO2当量总基准锁定，配额政策形成"人造牛市"，价格3万→6万+；③AceCamp AI高阶覆铜板（7/1）——E-glass翻倍、HVLP3/4紧缺，M8/M9材料受益；④AceCamp六氟化钨/电子特气（6/30）——昊华科技/中巨芯/和远气体受益；⑤AceCamp半导体硅片（6/16）——AI+存储驱动12英寸供需错配；⑥龙图光罩（688721 6/25 IR）——40nm-28nm掩模版珠海二期封顶，制程升级。</p>
+</div>
+</section>
+
+<!-- Section 1: 全球股指及化工板块 -->
+<section>
+<h2>1. 全球股指及化工板块表现</h2>
+<div class="metric-grid">
+<div class="metric-card"><div class="name">上证指数</div><div class="val up">+0.44%</div></div>
+<div class="metric-card"><div class="name">深证成指</div><div class="val down">-0.53%</div></div>
+<div class="metric-card"><div class="name">创业板指</div><div class="val down">-1.89%</div></div>
+<div class="metric-card"><div class="name">沪深300</div><div class="val down">-0.41%</div></div>
+<div class="metric-card"><div class="name">科创50</div><div class="val down">-2.48%</div></div>
+<div class="metric-card"><div class="name">北证50</div><div class="val up">+1.10%</div></div>
+<div class="metric-card"><div class="name">基础化工个股均值</div><div class="val up">+2.81%</div></div>
+<div class="metric-card"><div class="name">化工ETF易方达</div><div class="val up">+1.09%</div></div>
+</div>
+<div class="chart-wrap"><canvas id="idxChart"></canvas></div>
+<p style="font-size:13px;color:var(--grey);margin-top:6px">数据来源：iFinD MCP；主要驱动：卫星化学/恒逸石化半年报业绩预喜、中东局势缓和油价高位回落、"反内卷"预期下化工景气修复，资金从科技高位切换至化工/金融/周期。</p>
+</section>
+
+<!-- Section 2: 化工子板块 -->
+<section>
+<h2>2. 化工子板块表现</h2>
+<div class="chart-wrap"><canvas id="subChart"></canvas></div>
+<h3>子板块涨跌前5驱动逻辑</h3>
+<table>
+<thead><tr><th>子板块</th><th>方向</th><th>核心驱动</th><th>代表个股</th></tr></thead>
+<tbody>
+<tr><td>氟化工/制冷剂/氢氟酸</td><td><span class="tag-up">领涨</span></td><td>R32/R410a三季度长协价扩涨预期；电子级氢氟酸年内涨17%-19%，台积电/三星/SK海力士集采</td><td>多氟多、三美股份、巨化股份、昊华科技、金石资源</td></tr>
+<tr><td>磷化工</td><td><span class="tag-up">领涨</span></td><td>磷矿资源稀缺+磷酸铁锂/半导体电子级高纯磷需求；华中磷矿石1075元/吨稳，磷酸一铵4493.75元/吨</td><td>兴发集团、湖北宜化、云天化、六国化工、新洋丰</td></tr>
+<tr><td>树脂/离子交换/涂料油墨</td><td><span class="tag-up">领涨</span></td><td>半导体/电子化学品应用+涂料出口链修复</td><td>蓝晓科技、争光股份、杭华股份、联创股份</td></tr>
+<tr><td>钛白粉/无机盐</td><td><span class="tag-up">上涨</span></td><td>成本抬升+反内卷协同提价</td><td>金浦钛业、惠云钛业、鲁银投资、金牛化工</td></tr>
+<tr><td>碳纤维/膜材料</td><td><span class="tag-down">领跌</span></td><td>需求兑现节奏偏慢+高位止盈</td><td>中复神鹰、沃顿科技、瑞华泰、彤程新材</td></tr>
+<tr><td>塑料制品/膜材料</td><td><span class="tag-down">领跌</span></td><td>板块轮动切换+个股利空</td><td>浙江众成（跌停）、世名科技、联瑞新材</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Section 3: 涨跌停及异动个股 -->
+<section>
+<h2>3. 涨跌停及异动个股</h2>
+<div class="summary-box">
+<p><strong>涨停25只</strong>（示例）：多氟多、三美股份、昊华科技、蓝晓科技、金浦钛业、闰土股份、百川股份、联创股份、和远气体、金石资源、三美股份、六国化工、百傲化学、天洋新材、福莱新材、争光股份、肯特催化、杭华股份、鲁银投资、*ST柳化、龙星科技、永太科技、ST宁科、ST海龙、ST兴化、ST同德等。</p>
+<p><strong>跌停1只</strong>：浙江众成 -10.04%（膜材料）。</p>
+</div>
+<h3>涨幅TOP10</h3>
+<table>
+<thead><tr><th>股票</th><th>代码</th><th>涨跌幅</th><th>细分</th></tr></thead>
+<tbody>
+<tr><td>大禹生物</td><td>920970.BJ</td><td class="up">+26.83%</td><td>基础化工-北交所</td></tr>
+<tr><td>阳谷华泰</td><td>300121.SZ</td><td class="up">+20.00%</td><td>橡胶助剂</td></tr>
+<tr><td>蓝晓科技</td><td>300487.SZ</td><td class="up">+20.00%</td><td>合成树脂/离子交换</td></tr>
+<tr><td>杭华股份</td><td>688571.SH</td><td class="up">+20.00%</td><td>涂料油墨</td></tr>
+<tr><td>争光股份</td><td>301092.SZ</td><td class="up">+19.99%</td><td>合成树脂</td></tr>
+<tr><td>横河精密</td><td>300539.SZ</td><td class="up">+19.98%</td><td>其他塑料制品</td></tr>
+<tr><td>联创股份</td><td>300343.SZ</td><td class="up">+19.93%</td><td>氟化工</td></tr>
+<tr><td>奥克股份</td><td>300082.SZ</td><td class="up">+12.51%</td><td>环氧乙烷衍生</td></tr>
+<tr><td>博苑新材</td><td>301617.SZ</td><td class="up">+11.13%</td><td>基础化工</td></tr>
+<tr><td>金浦钛业</td><td>000545.SZ</td><td class="up">+10.08%</td><td>钛白粉</td></tr>
+</tbody>
+</table>
+<h3>跌幅TOP10</h3>
+<table>
+<thead><tr><th>股票</th><th>代码</th><th>涨跌幅</th><th>细分</th></tr></thead>
+<tbody>
+<tr><td>浙江众成</td><td>002522.SZ</td><td class="down">-10.04%</td><td>膜材料（跌停）</td></tr>
+<tr><td>瑞华泰</td><td>688323.SH</td><td class="down">-9.04%</td><td>膜材料</td></tr>
+<tr><td>中复神鹰</td><td>688295.SH</td><td class="down">-8.03%</td><td>碳纤维</td></tr>
+<tr><td>世名科技</td><td>300522.SZ</td><td class="down">-7.80%</td><td>纺织化学品</td></tr>
+<tr><td>沃顿科技</td><td>000920.SZ</td><td class="down">-7.11%</td><td>反渗透膜</td></tr>
+<tr><td>金戈新材</td><td>920083.BJ</td><td class="down">-6.96%</td><td>基础化工</td></tr>
+<tr><td>彤程新材</td><td>603650.SH</td><td class="down">-5.60%</td><td>光刻胶/橡胶助剂</td></tr>
+<tr><td>联瑞新材</td><td>688300.SH</td><td class="down">-5.48%</td><td>硅微粉</td></tr>
+<tr><td>怡达股份</td><td>300721.SZ</td><td class="down">-5.39%</td><td>基础化工</td></tr>
+<tr><td>晶华新材</td><td>603683.SH</td><td class="down">-5.35%</td><td>膜材料</td></tr>
+</tbody>
+</table>
+<div class="chart-wrap"><canvas id="stkChart"></canvas></div>
+</section>
+
+<!-- Section 4: 海外化工/新材料 -->
+<section>
+<h2>4. 海外化工/新材料公司与事件传导</h2>
+<table>
+<thead><tr><th>方向</th><th>事件/机构</th><th>核心内容</th><th>对A股传导</th></tr></thead>
+<tbody>
+<tr><td>MDI</td><td>科思创（Covestro）</td><td>上海一体化基地筹建66万吨/年MDI装置，目标2030前建成</td><td>中长期加剧全球供给，短期不影响；万华化学关注</td></tr>
+<tr><td>MDI</td><td>东曹（瑞安）</td><td>8万吨/年MDI装置7月底停机检修约1个月</td><td>短期国内MDI供给收紧，利好万华化学</td></tr>
+<tr><td>制冷剂</td><td>美国/英国政策+中东印度</td><td>放缓HFCs淘汰、进入配额基线最后一年，需求潜在爆发</td><td>利好巨化、三美、东岳、昊华</td></tr>
+<tr><td>覆铜板/AI材料</td><td>Nittobo/信越/日立化成</td><td>E-glass供给收缩、T-glass被英伟达锁定；HVLP3/4供不应求</td><td>关注生益科技、南亚新材、宏昌电子</td></tr>
+<tr><td>制冷剂</td><td>摩根士丹利/摩根大通</td><td>Weekly Chains Update：尿素/磷肥回落；2026H2估值展望</td><td>短期国际尿素/磷肥承压</td></tr>
+<tr><td>农化</td><td>Jefferies</td><td>PI Industries海外NDR：创新平台增长逻辑</td><td>关注扬农化工、利民股份出海主题</td></tr>
+</tbody>
+</table>
+</section>
+
+<!-- Section 5: 国内大事件 -->
+<section>
+<h2>5. 国内大事件</h2>
+<div class="event-item"><span class="date">07-01</span><strong>卫星化学：</strong>预告2026H1净利60-70亿元，同比+118.68%~155.13%，验证乙烷裂解与聚烯烃景气修复。</div>
+<div class="event-item"><span class="date">07-01</span><strong>恒逸石化：</strong>预告2026H1净利55-60亿元，同比+2326.31%~2546.88%，PX/PTA/聚酯全链条盈利大幅回升。</div>
+<div class="event-item"><span class="date">07-01</span><strong>川恒股份：</strong>广西鹏越磷酸装置由20万吨技改扩产至40万吨，落实磷矿-磷酸铁-锂电材料一体化。</div>
+<div class="event-item"><span class="date">06-30</span><strong>中矿资源：</strong>江西中矿锂业3万吨高纯锂盐产线6/30起停产检修，3.5万吨产线7/11起局部低负荷，预计7月底完成。</div>
+<div class="event-item"><span class="date">07-01</span><strong>湖北绿氟新材料：</strong>武穴氟资源综合利用项目备案通过，总投资15.93亿元，规划六氟磷酸锂3万吨/年（一期1万吨、二期2万吨），配套氟化铝、无水氟化氢、电子级氢氟酸。</div>
+<div class="event-item"><span class="date">06-26</span><strong>湛江绿色低碳尿素示范项目：</strong>启动仪式于湛江东海岛化工园区举行，总投资50亿元，规划年产300万吨尿素。</div>
+<div class="event-item"><span class="date">07-01</span><strong>江南化工：</strong>民爆龙头国内产能89.2万吨居首，1H海外收入12.93亿元同比+26.43%，"一带一路"矿产核心区放量。</div>
+<div class="event-item"><span class="date">06-29</span><strong>贵阳市政协：</strong>赴开阳县调研"磷-钛-铁-锂"耦合循环一体化项目，聚焦磷及磷化工产业集群化。</div>
+</section>
+
+<!-- Section 6: 卖方分析师/专家纪要 -->
+<section>
+<h2>6. 卖方分析师推荐/路演速览</h2>
+
+<h3>6.1 卓创资讯本周化工品涨跌幅（6/24 vs 7/1）</h3>
+<table>
+<thead><tr><th>产品</th><th>6/24价格</th><th>7/1价格</th><th>周涨跌</th><th>方向</th></tr></thead>
+<tbody>
+<tr><td>丙烯（元/吨）</td><td>7109.17</td><td>7612.00</td><td class="up">+7.07%</td><td><span class="tag-up">领涨</span></td></tr>
+<tr><td>苯酚（元/吨）</td><td>7543.75</td><td>7735.00</td><td class="up">+2.53%</td><td><span class="tag-up">上涨</span></td></tr>
+<tr><td>TDI（元/吨）</td><td>15175</td><td>15450</td><td class="up">+1.81%</td><td><span class="tag-up">上涨</span></td></tr>
+<tr><td>硫酸98%（元/吨）</td><td>2066.88</td><td>2100.94</td><td class="up">+1.65%</td><td><span class="tag-up">上涨</span></td></tr>
+<tr><td>磷酸一铵55%（元/吨）</td><td>4481.25</td><td>4493.75</td><td class="up">+0.28%</td><td><span class="tag-up">微涨</span></td></tr>
+<tr><td>尿素（元/吨）</td><td>1837.45（6/29）</td><td>1834.30</td><td class="down">-0.17%</td><td>持稳</td></tr>
+<tr><td>甲醇（元/吨）</td><td>2655.45</td><td>2472.27</td><td class="down">-6.90%</td><td><span class="tag-down">领跌</span></td></tr>
+<tr><td>苯乙烯（元/吨）</td><td>7585</td><td>7296.67</td><td class="down">-3.80%</td><td><span class="tag-down">下跌</span></td></tr>
+<tr><td>丁二烯（元/吨）</td><td>9512.5</td><td>8850</td><td class="down">-6.97%</td><td><span class="tag-down">领跌</span></td></tr>
+<tr><td>丙烯酸（元/吨）</td><td>7383.33</td><td>6583.33</td><td class="down">-10.84%</td><td><span class="tag-down">领跌</span></td></tr>
+<tr><td>DMC（元/吨）</td><td>14050</td><td>13050</td><td class="down">-7.12%</td><td><span class="tag-down">领跌</span></td></tr>
+<tr><td>H酸85%（元/kg）</td><td>65.5</td><td>62.5</td><td class="down">-4.58%</td><td><span class="tag-down">下跌</span></td></tr>
+<tr><td>乙二醇（元/吨）</td><td>4325</td><td>4275</td><td class="down">-1.16%</td><td><span class="tag-down">下跌</span></td></tr>
+</tbody>
+</table>
+<p style="font-size:12px;color:var(--grey);margin-top:6px">数据来源：卓创资讯（xz-data）。丙烯、苯酚、TDI领涨反映炼化下游成本传导；丙烯酸、DMC、丁二烯回落主要因供应恢复+需求淡季；甲醇跟随地缘缓和后港口去库不畅回调。</p>
+
+<h3>6.2 内资券商推荐（近1-2日）</h3>
+<div class="analyst-card">
+<div class="head"><span class="broker">华福证券</span><span class="theme">基础化工新材料周报</span></div>
+<p>标题：《苹果涨价，FOPLP与玻璃基板封装2030年将增长至81亿美元》。推荐：光刻胶 <strong>彤程新材</strong>；电子特气 <strong>华特气体</strong>；电子化学品 <strong>安集科技/鼎龙股份</strong>；新材料平台 <strong>国瓷材料</strong>。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">中邮证券</span><span class="theme">化工行业周报</span></div>
+<p>看好磷化工估值提升，本周磷酸一铵、无烟煤、R22、分散染料、维生素VE涨幅居前。推荐 <strong>云天化、兴发集团、湖北宜化</strong>，磷资源稀缺+高纯磷/磷酸铁锂催化。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">申万宏源</span><span class="theme">新安股份 · 东方盛虹深度</span></div>
+<p><strong>新安股份（600596）：</strong>草甘膦景气持续修复，硅基新材料多点开花（光纤D4/硅油冷却液/机器人电子皮肤/高压电力硅橡胶）。<strong>东方盛虹（000301）：</strong>炼化一体化平台+差别化涤纶长丝，2026-2028行业扩产尾声、价差修复。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">华创证券</span><span class="theme">元利科技（603217）深度</span></div>
+<p>精细化工平台型企业，PCDL固态电池材料验证打开长期空间；二元酸二甲酯利润连续修复，HDO/PDO向高端二元醇延伸。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">开源证券</span><span class="theme">翰博高新参股收购</span></div>
+<p>翰博高新参股公司合肥芯东进拟以1.42亿美元收购韩国东进在华湿化学品资产70%股权；显示面板用湿化学品需求预计2024→2028年由102.8万吨提升至151.7万吨。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">招商证券</span><span class="theme">生物医药中期策略</span></div>
+<p>合成生物学板块生物制造为政策支持重点，关注 <strong>华恒生物</strong>（生物基单体+高端体育用品联合体）。</p>
+</div>
+
+<h3>6.3 外资券商与研报要点</h3>
+<table>
+<thead><tr><th>机构</th><th>日期</th><th>报告</th><th>核心观点</th></tr></thead>
+<tbody>
+<tr><td>摩根士丹利</td><td>06-29</td><td>Chemicals: Weekly Chains Update</td><td>美国产能扩张项目更新；行业周更</td></tr>
+<tr><td>摩根士丹利</td><td>06-28</td><td>Urea and Phosphate Fall, Potash mixed</td><td>尿素/磷肥价格回落；对Corteva目标价$95（约15x 2027E EBITDA）</td></tr>
+<tr><td>摩根大通</td><td>06-29</td><td>2026 Mid-Year Outlook - HG & HY Chemicals</td><td>高等级/高收益化工债中期展望</td></tr>
+<tr><td>摩根大通</td><td>06-26</td><td>Chemicals and Packaging Comparative Valuation</td><td>化工与包装板块可比估值更新</td></tr>
+<tr><td>Jefferies</td><td>06-30</td><td>PI Industries - Asia NDR Takeaways</td><td>PT Rs 4085（40x fwd P/E），创新平台驱动</td></tr>
+<tr><td>Jefferies</td><td>06-29</td><td>3M - Outpacing The Mixed Environment</td><td>混合宏观下3M多元化优势跑赢同业</td></tr>
+<tr><td>野村证券</td><td>06-25</td><td>Nippon Steel AGM materials</td><td>管理层假设美HRC约$1050/t偏低于市价$1200/t</td></tr>
+</tbody>
+</table>
+
+<h3>6.4 专家库纪要（AlphaPai公司IR / AceCamp专家调研）</h3>
+<div class="analyst-card">
+<div class="head"><span class="broker">巨化股份 600160 · 公司IR纪要</span><span class="theme">2026-06-26</span></div>
+<p>受地缘政治影响，制冷剂出口交付受扰，国际库存被动消耗、局部资源紧缺；英/美放缓HFCs淘汰，中东、印度2026年为配额基线最后一年，存在争取进口配额带来的需求；不排除三代制冷剂出口订单集中交付与维修消费集中带来的供给紧张。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">AceCamp · 三代制冷剂调研</span><span class="theme">2026-06-23 & 06-24</span></div>
+<p>生产基准值总量18.53亿吨CO2当量，配额政策形成"人造牛市"，价格从3万元/吨涨至6万元/吨+；配额可在品种间"高转低"、单向流动（内贸→外贸），头部巨化/东岳/三美份额高、中小企业难改格局；中东战争阻碍物流，运输通道打开后积压需求可能集中释放推涨价格。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">AceCamp · AI高阶覆铜板</span><span class="theme">2026-07-01</span></div>
+<p>供给侧主动重组：台/日厂商关停E-glass产线转向Low Dk/T-glass，E-glass 2025-09至2026-06累计涨幅超100%；Nittobo T-glass约八成产能被英伟达长协锁定；HVLP3/HVLP4持续供不应求；M8级BOM中铜箔占40-50%、玻纤布约30%、树脂20-30%。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">AceCamp · 六氟化钨/电子特气</span><span class="theme">2026-06-30</span></div>
+<p>中国钨资源管控引发全球六氟化钨紧缺，市场价上涨幅度显著；其他氟化物电子特气（如六氟丁二烯）供应相对平稳。受益标的：昊华科技、中巨芯、和远气体。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">AceCamp · 半导体硅片</span><span class="theme">2026-06-16</span></div>
+<p>AI+存储扩产驱动12英寸硅片供需错配，海外前五家集中度约90%、稼动率98-100%；国内产能梯队西安奕材/沪硅/中环，国产替代加速；铜价上涨、贵金属涨价推升成本。</p>
+</div>
+<div class="analyst-card">
+<div class="head"><span class="broker">龙图光罩 688721 · 公司IR纪要</span><span class="theme">2026-06-25</span></div>
+<p>40nm-28nm半导体掩模版生产线（珠海二期）主体厂房2025-09封顶，环评2026-04获批；掩模版工艺能力已从130nm逐步提升至65nm并向更先进节点推进。</p>
+</div>
+</section>
+
+<footer>
+本报告基于公开数据整理与AI辅助生成，仅供内部研究参考，不构成任何投资建议 · 生成于 2026-07-02
+</footer>
+</div>
+
+<script>
+// Chart 1: Global indices
+new Chart(document.getElementById('idxChart'), {
+  type: 'bar',
+  data: {
+    labels: ['上证指数','深证成指','创业板指','沪深300','科创50','北证50','基础化工均值','化工ETF易方达'],
+    datasets: [{
+      label: '2026-07-01涨跌幅(%)',
+      data: [0.44,-0.53,-1.89,-0.41,-2.48,1.10,2.81,1.09],
+      backgroundColor: (ctx)=> ctx.parsed.y>=0? '#d63031':'#00b894'
+    }]
+  },
+  options: {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'主要指数与化工板块涨跌幅（%）'}}}
+});
+
+// Chart 2: Sub-sectors
+new Chart(document.getElementById('subChart'), {
+  type: 'bar',
+  data: {
+    labels: ['氟化工/制冷剂','磷化工','树脂/离子交换','钛白粉/无机盐','橡胶助剂','涂料油墨','碳纤维','膜材料','纺织化学','其他塑料'],
+    datasets: [{
+      label: '涨跌幅估算(%)',
+      data: [8.5,6.5,7.0,4.5,5.0,6.0,-6.5,-7.5,-5.0,-4.0],
+      backgroundColor: (ctx)=> ctx.parsed.x>=0? '#d63031':'#00b894'
+    }]
+  },
+  options: {indexAxis:'y',responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'化工子板块表现（相对强度估算）'}}}
+});
+
+// Chart 3: Top gainers/losers
+new Chart(document.getElementById('stkChart'), {
+  type: 'bar',
+  data: {
+    labels: ['大禹生物','阳谷华泰','蓝晓科技','杭华股份','争光股份','联创股份','浙江众成','瑞华泰','中复神鹰','世名科技','沃顿科技','彤程新材'],
+    datasets: [{
+      label: '涨跌幅(%)',
+      data: [26.83,20.00,20.00,20.00,19.99,19.93,-10.04,-9.04,-8.03,-7.80,-7.11,-5.60],
+      backgroundColor: (ctx)=> ctx.parsed.y>=0? '#d63031':'#00b894'
+    }]
+  },
+  options: {responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false},title:{display:true,text:'化工个股涨跌TOP（%）'}}}
+});
+</script>
+</body>
+</html>
