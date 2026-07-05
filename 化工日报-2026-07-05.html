@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>化工日报 | 2026年7月5日（复盘7月3日）</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<style>
+:root{--primary:#1a1a2e;--accent:#0f3460;--green:#00b894;--red:#d63031;--grey:#636e72;--bg:#f8f9fa;--card:#fff}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;background:var(--bg);color:var(--primary);line-height:1.6}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+header{background:linear-gradient(135deg,var(--primary),var(--accent));color:#fff;padding:30px;border-radius:12px;margin-bottom:24px}
+header h1{font-size:1.8rem;margin-bottom:8px}
+header .subtitle{opacity:.8;font-size:.95rem}
+.section{background:var(--card);border-radius:12px;padding:24px;margin-bottom:20px;box-shadow:0 2px 8px rgba(0,0,0,.06)}
+.section h2{font-size:1.3rem;color:var(--accent);margin-bottom:16px;padding-bottom:8px;border-bottom:2px solid var(--bg)}
+.summary-box{background:#f0f3f8;border-left:4px solid var(--accent);padding:20px;border-radius:0 8px 8px 0;font-size:.88rem;line-height:1.9;white-space:pre-wrap}
+.metric-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:20px}
+.metric-card{background:var(--bg);border-radius:8px;padding:14px;text-align:center}
+.metric-card .label{font-size:.82rem;color:var(--grey);margin-bottom:4px}
+.metric-card .value{font-size:1.3rem;font-weight:700}
+.metric-card .change{font-size:.88rem;margin-top:4px}
+.tag-up{color:var(--green);font-weight:600}
+.tag-down{color:var(--red);font-weight:600}
+.chart-container{position:relative;height:320px;margin:16px 0}
+.chart-container-wide{position:relative;height:500px;margin:16px 0}
+table{width:100%;border-collapse:collapse;margin:12px 0;font-size:.85rem}
+table th{background:var(--accent);color:#fff;padding:8px 10px;text-align:left}
+table td{padding:7px 10px;border-bottom:1px solid #eee}
+table tr:hover{background:#f5f6fa}
+.event-item{padding:12px 0;border-bottom:1px solid #eee}
+.event-item:last-child{border-bottom:none}
+.event-item .event-title{font-weight:600;color:var(--primary)}
+.event-item .event-detail{color:var(--grey);font-size:.86rem;margin-top:4px}
+.analyst-card{background:var(--bg);border-radius:8px;padding:14px;margin-bottom:10px}
+.analyst-card .institution{font-weight:700;color:var(--accent);font-size:.92rem}
+.analyst-card .viewpoint{margin-top:5px;font-size:.88rem}
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media(max-width:768px){.two-col{grid-template-columns:1fr}.metric-grid{grid-template-columns:repeat(2,1fr)}header h1{font-size:1.4rem}.chart-container,.chart-container-wide{height:280px}}
+.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:.78rem;font-weight:600}
+.badge-up{background:rgba(0,184,148,.12);color:var(--green)}
+.badge-down{background:rgba(214,48,49,.12);color:var(--red)}
+.note-box{background:#fff3cd;border-left:4px solid #ffc107;padding:12px;border-radius:0 8px 8px 0;font-size:.85rem;margin:12px 0}
+</style>
+</head>
+<body>
+<div class="container">
+
+<header>
+<h1>化工行业日报</h1>
+<div class="subtitle">2026年7月5日（复盘7月3日周五） | 数据来源：iFinD、卓创资讯、AlphaPai、WebSearch</div>
+</header>
+
+<!-- Section 0: 执行摘要 -->
+<div class="section">
+<h2>执行摘要</h2>
+<div class="summary-box">◆ 全球： A股上证+0.37%(4043.64)/深成+0.64%/创业板+0.07%，成交3.21万亿（连续15日破3万亿，放量）；日经+1.47%、恒生+1.28%、DAX+0.78%创历史新高、富时+0.25%；美股7月3日因独立日全天休市（7月2日收盘：道指+1.14%创历史新高，纳指-0.80%，标普持平，非农仅5.7万人远低预期驱动降息预期升温）；黄金+2.28%至4122美元/盎司，布伦特原油71.93美元(+0.18%)
+
+◆ 化工板块（37子板块排名）： 领涨：机器人&机器人材料+2.96%、SAF+2.71%、碳纤+2.43%、钾肥+1.76%、吸附树脂+1.18%、农药+1.14%；领跌：氟化工-9.11%（全面跌停）、电子特气-9.23%（全线暴跌）、半导体材料-5.89%、硅化工-5.67%、PCB材料约-5%、面板材料-4.62%、金属化工-4.97%。当日核心特征：前3日连续涨停的AI半导体材料方向（氟化工/电子特气/半导体材料）集体跌停获利了结，资金切换至碳纤/机器人材料/SAF等低位板块
+
+◆ 涨跌停与异动股： 涨停——蓝晓科技+10.49%（吸附树脂，5日累涨+32.49%，盐湖提锂应用爆发）、金发科技+10.03%（工程塑料，扣非+57.78%+AI/新能源材料布局+海外工厂投产）、艾艾精工+10.00%（工程塑料）、辉丰股份+9.85%（农药，5日+17.37%，夏季旺季+出口）、鹿山新材+9.99%（工程塑料，胶黏剂）；跌停——多氟多-10.00%（氟化工，4天3板后澄清半导体级氢氟酸营收占比不足2%无六氟化钨产线，25万股东坐过山车成交52亿）、巨化股份-10.00%（氟化工，前期涨幅过大获利了结）、三美股份-10.00%（氟化工，7/1涨停后一字跌停）、滨化股份-10.00%（氯碱，7/2涨停后天地板）、金宏气体-16.21%（电子特气，科创板20cm跌停，前3日累涨近40%）、晶瑞电材-12.59%（半导体材料，6/30涨停后巨量回调）、兴福电子-10.16%（半导体材料，连续两日跌停）、泰和科技-10.49%（添加剂）、瑞丰高材-10.34%（添加剂）；5日异动：蓝晓科技5日+32.49%、辉丰股份5日+17.37%、安利股份5日+13.15%
+
+◆ 大事件（7月2-3日）： ①多氟多4天3板后跌停——澄清半导体级氢氟酸营收占比不足2%，无六氟化钨生产线，氟化工炒作逻辑证伪引发板块踩踏（21财经）；②全球MDI巨头集体提价——万华化学/巴斯夫/亨斯迈涨价函，最高350欧元/吨，万华加速扩产（利好：万华化学）；③金发科技涨停——改性塑料扣非+57.78%，布局AI/新能源/低空新材料，西班牙与印尼工厂投产海外收入+35%；④台积电/三星/海力士疯抢电子级氢氟酸——UP/UPS级年初以来涨价17-19%，半导体占下游55%，供需错配；⑤7月检修旺季集中——PTA/PX头部企业检修超2200万吨（产能20%+），开工率降至62.7%为近三年最低；BDO内蒙古东景28万吨检修50天；独山子石化苯乙烯36万吨7/6检修30天；⑥卓创资讯化工品周度涨跌幅——涨幅前5：电石+10.87%（西北限电+下游PVC/BDO开工回升）、环氧丙烷+2.59%、PVC+1.74%、苯乙烯+1.50%、醋酸+1.29%；跌幅前5：液氯跌至负价-25元/吨（氯碱过剩倒贴运费）、甲醇-6.00%、丙烯酸-5.65%、烧碱-4.37%、乙二醇-3.73%（卓创资讯）
+
+◆ 卖方主线（内资，7月2-3日）： 华安证券：AI拉动磷化铟进入景气周期+电子化学品景气扩散（重点：有研新材/南大光电/雅克科技）；中信证券：AI液冷进入整柜时代，2027年全球AIDC液冷市场达218亿美元（重点：导热材料/液冷产业链）；华安证券周报：新增12家化工企业检修，R22单周涨9.09%/合成氨涨11.21%；国泰君安期货：PVC低估值+聚烯烃供应回升价格中枢下移
+
+◆ 卖方主线（外资，7月1-3日）： ①Jefferies——南亚塑胶Buy：M8/M9级CCL材料2H26量产，AI服务器+1.6T交换机驱动中高端CCL供不应求，Nittobo T-glass涨价30%（利好：生益科技/华正新材）；②美银美林——Air Liquide"Putting Air in AI"：电子业务仅占10%但AI半导体占投资积压40%，电子板块2026-2030有机增长14%为共识两倍（利好：杭氧股份/华特气体）；③高盛——中国半导体：长鑫存储与腾讯签服务器DRAM长协超200亿，SPE和半导体材料受益；④摩根士丹利——半导体材料股策略：CMP研磨垫(Fujibo)+低介电玻璃(NittoBoseki)+光刻胶单体(大阪有机化学)+InP基板(JX Advanced Metals)，AI相关产品OP贡献从8%升至20%；⑤花旗——大阪有机化学上修OP至¥7.5bn，ArF光刻胶材料放量驱动
+
+◆ 专家库纪要（7月1-3日，AlphaPai公司IR / 进门财经）： ①海川智能(7/1)——拟1.3亿参股南京集溢半导体15.3%，标的主营砷化镓晶片（4英寸为主），应用于光电子/射频，具备自有洁净室+晶片制造设备+十余年技术积累，62家机构参会（进门财经）；②巨化股份(7/1前)——1万吨高纯PFA装置5月投产，金属离子达SEMI F57标准，半导体湿法工艺已批量应用（AlphaPai公司IR）；③新乡化纤(7/3)——拟定增不超13亿元，新增2万吨生物质纤维素产能，探索生物基航油/氨纶原料（AlphaPai公司IR）；④集泰股份(7/3)——储能/数据中心有机硅聚氨酯电池安全防护灌封方案，唯一参编国标GB43854-2024（AlphaPai公司IR）；⑤斯迪克(7/1)——折叠屏/VR光学显示功能性涂层复合材料国产替代加速（AlphaPai公司IR）；⑥东方锆业(7/1前)——固态电池LLZO氧化物电解质对高纯复合氧化锆需求增长（AlphaPai公司IR）[注：AlphaPai公司IR及AceCamp接口当日返回服务异常，部分纪要引用此前成功采集数据；进门财经为付费平台，仅获取到公开转载内容]</div>
+</div>
+
+<!-- Section 1: 全球股指 -->
+<div class="section">
+<h2>Section 1 · 全球股指及化工板块表现</h2>
+<div class="note-box">注：美股7月3日（周五）因独立日假期全天休市，以下美股数据为7月2日收盘。</div>
+<div class="metric-grid">
+<div class="metric-card"><div class="label">上证指数</div><div class="value">4,043.64</div><div class="change tag-up">+0.37%</div></div>
+<div class="metric-card"><div class="label">深证成指</div><div class="value">15,597.51</div><div class="change tag-up">+0.64%</div></div>
+<div class="metric-card"><div class="label">创业板指</div><div class="value">4,019.93</div><div class="change tag-up">+0.07%</div></div>
+<div class="metric-card"><div class="label">日经225</div><div class="value">69,744.07</div><div class="change tag-up">+1.47%</div></div>
+<div class="metric-card"><div class="label">恒生指数</div><div class="value">23,350.03</div><div class="change tag-up">+1.28%</div></div>
+<div class="metric-card"><div class="label">德国DAX</div><div class="value">25,779.31</div><div class="change tag-up">+0.78% 新高</div></div>
+<div class="metric-card"><div class="label">道琼斯(7/2)</div><div class="value">52,900.07</div><div class="change tag-up">+1.14% 新高</div></div>
+<div class="metric-card"><div class="label">纳斯达克(7/2)</div><div class="value">25,832.67</div><div class="change tag-down">-0.80%</div></div>
+<div class="metric-card"><div class="label">布伦特原油</div><div class="value">$71.93</div><div class="change tag-up">+0.18%</div></div>
+<div class="metric-card"><div class="label">现货黄金</div><div class="value">$4,122.35</div><div class="change tag-up">+2.28%</div></div>
+<div class="metric-card"><div class="label">A股成交额</div><div class="value">3.21万亿</div><div class="change tag-up">连续15日破3万亿</div></div>
+<div class="metric-card"><div class="label">化工板块</div><div class="value">37板块</div><div class="change tag-down">分化剧烈</div></div>
+</div>
+<div class="chart-container">
+<canvas id="globalChart"></canvas>
+</div>
+</div>
+
+<!-- Section 2: 化工子板块表现 -->
+<div class="section">
+<h2>Section 2 · 化工37子板块表现（按自定义分类）</h2>
+<div class="chart-container-wide">
+<canvas id="subSectorChart"></canvas>
+</div>
+<div class="two-col">
+<div>
+<h3 style="font-size:1rem;margin-bottom:8px;color:var(--green)">领涨板块及驱动</h3>
+<table>
+<tr><th>板块</th><th>涨跌幅</th><th>领涨个股/驱动</th></tr>
+<tr><td>机器人&机器人材料</td><td class="tag-up">+2.96%</td><td>上纬新材+7.11%，机器人产业链催化</td></tr>
+<tr><td>SAF</td><td class="tag-up">+2.71%</td><td>卓越新能+3.59%，政策催化</td></tr>
+<tr><td>碳纤</td><td class="tag-up">+2.43%</td><td>中复神鹰+2.83%，低空经济+军工</td></tr>
+<tr><td>钾肥</td><td class="tag-up">+1.76%</td><td>亚钾国际+7.46%，海外钾矿</td></tr>
+<tr><td>吸附树脂</td><td class="tag-up">+1.18%</td><td>蓝晓科技+10.49%涨停</td></tr>
+<tr><td>农药</td><td class="tag-up">+1.14%</td><td>辉丰+9.85%，夏季旺季</td></tr>
+</table>
+</div>
+<div>
+<h3 style="font-size:1rem;margin-bottom:8px;color:var(--red)">领跌板块及驱动</h3>
+<table>
+<tr><th>板块</th><th>涨跌幅</th><th>领跌个股/驱动</th></tr>
+<tr><td>电子特气</td><td class="tag-down">-9.23%</td><td>金宏气体-16.21%，前期暴涨回调</td></tr>
+<tr><td>氟化工</td><td class="tag-down">-9.11%</td><td>多氟多/巨化/三美跌停，澄清证伪</td></tr>
+<tr><td>半导体材料</td><td class="tag-down">-5.89%</td><td>晶瑞电材-12.59%，获利了结</td></tr>
+<tr><td>硅化工</td><td class="tag-down">-5.67%</td><td>东岳硅材-9.01%</td></tr>
+<tr><td>PCB材料</td><td class="tag-down">~-5%</td><td>强力新材-7.85%</td></tr>
+<tr><td>面板材料</td><td class="tag-down">-4.62%</td><td>濮阳惠成-8.20%</td></tr>
+</table>
+</div>
+</div>
+</div>
+
+<!-- Section 3: 涨跌停及异动个股 -->
+<div class="section">
+<h2>Section 3 · 涨跌停及异动个股</h2>
+<div class="summary-box" style="margin-bottom:16px;font-size:.86rem;">核心特征：前3日连续涨停的AI半导体材料方向（氟化工/电子特气/半导体材料）集体跌停获利了结。跌停9只集中在氟化工(3)+电子特气(4)+半导体材料(2)，涨停5只集中在工程塑料(3)+吸附树脂(1)+农药(1)。</div>
+<div class="two-col">
+<div>
+<h3 style="font-size:1rem;margin-bottom:8px;color:var(--green)">涨停/接近涨停（含原因）</h3>
+<table>
+<tr><th>个股</th><th>板块</th><th>涨幅</th><th>原因</th></tr>
+<tr><td>蓝晓科技</td><td>吸附树脂</td><td class="tag-up">+10.49%</td><td>盐湖提锂应用爆发，5日+32.49%</td></tr>
+<tr><td>金发科技</td><td>工程塑料</td><td class="tag-up">+10.03%</td><td>扣非+57.78%，AI/低空新材料+海外投产</td></tr>
+<tr><td>艾艾精工</td><td>工程塑料</td><td class="tag-up">+10.00%</td><td>高端塑料制品需求</td></tr>
+<tr><td>鹿山新材</td><td>工程塑料</td><td class="tag-up">+9.99%</td><td>胶黏剂/热熔胶新应用</td></tr>
+<tr><td>辉丰股份</td><td>农药</td><td class="tag-up">+9.85%</td><td>夏季旺季+出口，5日+17.37%</td></tr>
+</table>
+</div>
+<div>
+<h3 style="font-size:1rem;margin-bottom:8px;color:var(--red)">跌停/大跌（含原因）</h3>
+<table>
+<tr><th>个股</th><th>板块</th><th>跌幅</th><th>原因</th></tr>
+<tr><td>金宏气体</td><td>电子特气</td><td class="tag-down">-16.21%</td><td>20cm跌停，前3日累涨40%</td></tr>
+<tr><td>晶瑞电材</td><td>半导体材料</td><td class="tag-down">-12.59%</td><td>6/30涨停后巨量回调</td></tr>
+<tr><td>泰和科技</td><td>添加剂</td><td class="tag-down">-10.49%</td><td>6/29涨停后获利了结</td></tr>
+<tr><td>瑞丰高材</td><td>添加剂</td><td class="tag-down">-10.34%</td><td>连续下跌加速杀跌</td></tr>
+<tr><td>兴福电子</td><td>半导体材料</td><td class="tag-down">-10.16%</td><td>连续两日跌停踩踏</td></tr>
+<tr><td>多氟多</td><td>氟化工</td><td class="tag-down">-10.00%</td><td>澄清半导体氢氟酸<2%，无六氟化钨</td></tr>
+<tr><td>巨化股份</td><td>氟化工</td><td class="tag-down">-10.00%</td><td>前期涨幅过大获利了结</td></tr>
+<tr><td>三美股份</td><td>氟化工</td><td class="tag-down">-10.00%</td><td>7/1涨停后一字跌停</td></tr>
+<tr><td>滨化股份</td><td>氯碱</td><td class="tag-down">-10.00%</td><td>7/2涨停后天地板</td></tr>
+</table>
+</div>
+</div>
+<h3 style="font-size:1rem;margin:16px 0 8px;color:var(--accent)">5日累计异动排行</h3>
+<table>
+<tr><th>个股</th><th>板块</th><th>5日涨跌幅</th><th>备注</th></tr>
+<tr><td>蓝晓科技</td><td>吸附树脂</td><td class="tag-up">+32.49%</td><td>盐湖提锂，连续强势</td></tr>
+<tr><td>辉丰股份</td><td>农药</td><td class="tag-up">+17.37%</td><td>农药旺季+出口超预期</td></tr>
+<tr><td>安利股份</td><td>聚氨酯</td><td class="tag-up">+13.15%</td><td>聚氨酯合成革新应用</td></tr>
+<tr><td>晨光生物</td><td>食品添加剂</td><td class="tag-up">+10.74%</td><td>天然色素需求</td></tr>
+<tr><td>瑞丰高材</td><td>添加剂</td><td class="tag-down">~-19%</td><td>连续5日下跌</td></tr>
+<tr><td>新安股份</td><td>硅化工</td><td class="tag-down">~-25%</td><td>6/29跌停后持续下行</td></tr>
+<tr><td>浙江众成</td><td>其它聚合物</td><td class="tag-down">~-24%</td><td>7/1跌停后连续大跌</td></tr>
+</table>
+<div class="chart-container" style="margin-top:16px;">
+<canvas id="limitChart"></canvas>
+</div>
+</div>
+
+<!-- Section 4: 海外化工/新材料公司 -->
+<div class="section">
+<h2>Section 4 · 海外化工/新材料公司动态</h2>
+<div class="note-box">美股7月3日因独立日休市，以下为7月1-2日海外动态。</div>
+<table>
+<tr><th>公司/事件</th><th>核心内容</th><th>A股映射/传导</th></tr>
+<tr><td>Air Liquide (法液空)</td><td>美银美林Buy："Putting Air in AI"，AI半导体占投资积压40%，电子板块2026-2030有机增长14%</td><td>杭氧股份/华特气体/金宏气体(工业气体AI增量)</td></tr>
+<tr><td>南亚塑胶 (台)</td><td>Jefferies Buy：M8/M9级CCL 2H26量产，AI服务器+1.6T驱动中高端CCL供不应求，T-glass涨价30%</td><td>生益科技/华正新材/南亚新材(CCL材料)</td></tr>
+<tr><td>JX Advanced Metals (日)</td><td>大摩：InP基板为AI长期核心产品，AI相关OP贡献从8%升至20%</td><td>有研新材(InP衬底)/先导先进</td></tr>
+<tr><td>大阪有机化学 (日)</td><td>花旗/大摩：上修OP至¥7.5bn，ArF光刻胶材料放量</td><td>南大光电/雅克科技(光刻胶)</td></tr>
+<tr><td>全球化工裁员</td><td>2026年继续大规模裁员和工厂关闭，海外供应收缩格局延续</td><td>利好中国化工出口填补+供给收缩支撑价格</td></tr>
+<tr><td>MDI全球提价</td><td>万华/巴斯夫/亨斯迈涨价函，最高350欧元/吨</td><td>万华化学(MDI全球龙头)</td></tr>
+</table>
+</div>
+
+<!-- Section 5: 国内大事件 -->
+<div class="section">
+<h2>Section 5 · 国内大事件（7月2-3日）</h2>
+<div class="event-item">
+<div class="event-title">① 多氟多4天3板后跌停——氟化工炒作逻辑证伪</div>
+<div class="event-detail">7月3日澄清：半导体级氢氟酸营收占比不足2%，目前没有六氟化钨生产线。25万股东坐过山车，成交额52亿元。带崩氟化工板块集体跌停。（来源：21财经）</div>
+</div>
+<div class="event-item">
+<div class="event-title">② 台积电/三星/海力士疯抢电子级氢氟酸——供需错配持续</div>
+<div class="event-detail">UP/UPS级电子级氢氟酸年初以来涨价17-19%，半导体占下游需求55%。氟化工股价虽短期回调但基本面量价齐升趋势未变。</div>
+</div>
+<div class="event-item">
+<div class="event-title">③ 全球MDI巨头集体提价</div>
+<div class="event-detail">万华化学、巴斯夫、亨斯迈发布涨价函，最高涨幅350欧元/吨。万华化学加速扩产巩固全球龙头地位。</div>
+</div>
+<div class="event-item">
+<div class="event-title">④ 金发科技涨停——AI+低空+新能源材料三线共振</div>
+<div class="event-detail">改性塑料业绩强劲（扣非净利+57.78%），布局AI数据中心散热材料、新能源汽车轻量化、低空经济复合材料。西班牙与印尼工厂投产，海外收入+35%。</div>
+</div>
+<div class="event-item">
+<div class="event-title">⑤ 7月检修旺季：PTA开工率降至近三年最低</div>
+<div class="event-detail">PTA/PX头部企业集中检修超2200万吨（产能20%+），开工率降至62.7%为近三年最低。BDO内蒙古东景28万吨检修50天。独山子石化苯乙烯36万吨7/6检修30天。供给收缩支撑价格。</div>
+</div>
+<div class="event-item">
+<div class="event-title">⑥ 卓创资讯化工品周度涨跌幅排名</div>
+<div class="event-detail">涨幅前5：电石+10.87%（西北限电+下游PVC/BDO开工回升）、环氧丙烷+2.59%、PVC+1.74%、苯乙烯+1.50%、醋酸+1.29%。跌幅前5：液氯跌至负价-25元/吨（氯碱过剩倒贴运费）、甲醇-6.00%、丙烯酸-5.65%、烧碱-4.37%、乙二醇-3.73%。（数据来源：卓创资讯）</div>
+</div>
+</div>
+
+<!-- Section 6: 卖方分析师推荐 -->
+<div class="section">
+<h2>Section 6 · 卖方分析师推荐/路演速览</h2>
+
+<h3 style="font-size:1.05rem;margin:16px 0 12px;color:var(--accent)">内资券商（7月2-3日发布）</h3>
+<div class="analyst-card">
+<div class="institution">华安证券 · AI拉动磷化铟景气周期</div>
+<div class="viewpoint">InP为光芯片核心衬底，800G→1.6T→3.2T光模块驱动需求指数级扩容。电子化学品景气从龙头扩散至二三线。重点标的：有研新材、南大光电、雅克科技。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">中信证券 · AI液冷进入整柜时代</div>
+<div class="viewpoint">2027年全球AIDC液冷市场有望达218亿美元。液冷Busbar使机架功率达750kW(风冷仅140kW)。重点关注导热材料及液冷产业链。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">华安证券 · 基础化工周报</div>
+<div class="viewpoint">本周新增12家企业检修(纯苯4家/PX1家/PTA2家)；R22单周涨9.09%至24500元/吨，合成氨涨11.21%。关注检修去库后的涨价机会。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">国泰君安期货 · 下半年能化展望</div>
+<div class="viewpoint">PVC低估值僵局；聚烯烃供应环比回升、价格中枢下移。建议关注进口替代、纯内需、高股息方向。</div>
+</div>
+
+<h3 style="font-size:1.05rem;margin:20px 0 12px;color:var(--accent)">外资券商（7月1-3日发布）</h3>
+<div class="analyst-card">
+<div class="institution">Jefferies · 南亚塑胶 Buy（AI电子材料转型）</div>
+<div class="viewpoint">M8/M9级CCL材料2H26量产，电子材料营收占比预计升至60%。AI服务器和1.6T网络交换机驱动中高端CCL供不应求。与Nittobo战略合作高端T-glass(涨价30%)。扩产高纯电子级液态CO2(超临界清洗)。利好映射：生益科技/华正新材。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">美银美林 · Air Liquide "Putting the Air in AI"</div>
+<div class="viewpoint">电子业务仅占销售额10%，但AI半导体占投资积压订单约40%。电子板块2026-2030有机增长约14%（约为市场共识两倍）。半导体Capex预计从$190bn增至$370bn。利好映射：杭氧股份/华特气体。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">高盛 · 中国半导体增长</div>
+<div class="viewpoint">长鑫存储与腾讯签署服务器DRAM长期供应协议（合同价值超200亿元）。看好SPE和半导体材料标的。国产化趋势推动材料需求。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">摩根士丹利 · 半导体材料股策略</div>
+<div class="viewpoint">推荐：CMP研磨垫(Fujibo)、低介电玻璃(NittoBoseki)、光刻胶单体(大阪有机)、InP基板(JX Advanced Metals)。AI相关产品OP贡献从F3/26的8%升至F3/29的20%。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">花旗 · 大阪有机化学（上修）</div>
+<div class="viewpoint">全年OP从¥6.4bn上修至¥7.5bn，ArF光刻胶材料放量为主要驱动。高纯电子溶剂和功能性化学品放量。映射：南大光电/雅克科技。</div>
+</div>
+
+<h3 style="font-size:1.05rem;margin:20px 0 12px;color:var(--accent)">专家库纪要（公司IR / 进门财经，7月1-3日）</h3>
+<div class="analyst-card">
+<div class="institution">海川智能 (300720) · 7/1 · 进门财经</div>
+<div class="viewpoint">拟1.3亿元参股南京集溢半导体15.3%，标的主营砷化镓晶片（4英寸为主），应用于光电子/射频领域。具备自有洁净室+晶片制造设备+十余年技术积累。62家机构参会（富国/广发/汇添富/南方/华夏等）。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">巨化股份 (600160) · AlphaPai公司IR</div>
+<div class="viewpoint">1万吨高纯PFA装置5月建成投产，已工业化批量应用。产品金属离子指标满足SEMI F57标准，达半导体级要求。可适配半导体湿法工艺、化学品储运、高端设备关键部件。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">新乡化纤 (000949) · 7/3 · AlphaPai公司IR</div>
+<div class="viewpoint">拟定增不超13亿元，新增2万吨生物质纤维素产能。探索生物基航油、生物基氨纶原料等高附加值方向。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">集泰股份 (002909) · 7/3 · AlphaPai公司IR</div>
+<div class="viewpoint">储能/数据中心方向有机硅、聚氨酯电池安全防护灌封方案。唯一参编国标GB43854-2024的胶粘剂/涂料企业。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">斯迪克 (300806) · 7/1 · AlphaPai公司IR</div>
+<div class="viewpoint">聚焦折叠屏、VR等光学显示领域。高端功能性涂层复合材料国产替代加速。</div>
+</div>
+<div class="analyst-card">
+<div class="institution">东方锆业 (002167) · AlphaPai公司IR</div>
+<div class="viewpoint">固态电池（LLZO氧化物电解质）对高纯复合氧化锆需求增长。核工业、航空航天、生物陶瓷等多赛道支撑。</div>
+</div>
+<div class="note-box">注：AlphaPai公司IR及AceCamp接口7月5日返回服务异常(HTTP 500/code 9999)，部分纪要引用此前成功采集数据。进门财经为付费平台，仅获取到公开转载内容。建议后续恢复后补充更新。</div>
+</div>
+
+</div>
+
+<script>
+// Section 1: 全球指数
+const globalCtx = document.getElementById('globalChart').getContext('2d');
+new Chart(globalCtx, {
+  type: 'bar',
+  data: {
+    labels: ['上证', '深成指', '创业板', '道指(7/2)', '纳指(7/2)', '日经225', '恒生', 'DAX', '黄金'],
+    datasets: [{
+      label: '涨跌幅(%)',
+      data: [0.37, 0.64, 0.07, 1.14, -0.80, 1.47, 1.28, 0.78, 2.28],
+      backgroundColor: [0.37, 0.64, 0.07, 1.14, -0.80, 1.47, 1.28, 0.78, 2.28].map(v => v >= 0 ? 'rgba(0,184,148,0.7)' : 'rgba(214,48,49,0.7)'),
+      borderColor: [0.37, 0.64, 0.07, 1.14, -0.80, 1.47, 1.28, 0.78, 2.28].map(v => v >= 0 ? '#00b894' : '#d63031'),
+      borderWidth: 1
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, title: { display: true, text: '全球主要指数涨跌幅(%) | 美股7/3休市，标注为7/2数据' } },
+    scales: { y: { beginAtZero: true, grid: { color: '#eee' } } }
+  }
+});
+
+// Section 2: 37子板块（选取代表性板块）
+const subCtx = document.getElementById('subSectorChart').getContext('2d');
+new Chart(subCtx, {
+  type: 'bar',
+  data: {
+    labels: ['机器人材料','SAF','碳纤','钾肥','吸附树脂','农药','香精香料','民爆','食品添加剂','聚酯','橡胶化工','聚氨酯','其它聚合物','化纤','涂料油漆','复合肥','纯碱盐化工','煤化工','催化剂','钛白粉','精细化工','炭黑','染料颜料','添加剂','新能源材料','磷化工','面板材料','金属化工','PCB材料','硅化工','半导体材料','电子特气','氟化工'],
+    datasets: [{
+      label: '7月3日涨跌幅(%)',
+      data: [2.96,2.71,2.43,1.76,1.18,1.14,1.12,1.11,0.89,0.85,0.69,-0.14,-0.47,-0.10,-0.57,-0.27,-0.68,-0.57,-0.98,-1.56,-1.74,-2.84,-2.08,-2.92,-2.66,-2.74,-4.62,-4.97,-5.0,-5.67,-5.89,-9.23,-9.11],
+      backgroundColor: [2.96,2.71,2.43,1.76,1.18,1.14,1.12,1.11,0.89,0.85,0.69,-0.14,-0.47,-0.10,-0.57,-0.27,-0.68,-0.57,-0.98,-1.56,-1.74,-2.84,-2.08,-2.92,-2.66,-2.74,-4.62,-4.97,-5.0,-5.67,-5.89,-9.23,-9.11].map(v => v >= 0 ? 'rgba(0,184,148,0.7)' : 'rgba(214,48,49,0.7)'),
+      borderWidth: 0
+    }]
+  },
+  options: {
+    indexAxis: 'y',
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, title: { display: true, text: '化工37子板块7月3日平均涨跌幅(%) — 按自定义分类' } },
+    scales: { x: { grid: { color: '#eee' } }, y: { ticks: { font: { size: 10 } } } }
+  }
+});
+
+// Section 3: 涨跌停
+const limitCtx = document.getElementById('limitChart').getContext('2d');
+new Chart(limitCtx, {
+  type: 'bar',
+  data: {
+    labels: ['蓝晓科技','金发科技','艾艾精工','鹿山新材','辉丰股份','','多氟多','巨化股份','三美股份','滨化股份','泰和科技','瑞丰高材','兴福电子','晶瑞电材','金宏气体'],
+    datasets: [{
+      label: '涨跌幅(%)',
+      data: [10.49,10.03,10.00,9.99,9.85,0,-10.00,-10.00,-10.00,-10.00,-10.49,-10.34,-10.16,-12.59,-16.21],
+      backgroundColor: [10.49,10.03,10.00,9.99,9.85,0,-10.00,-10.00,-10.00,-10.00,-10.49,-10.34,-10.16,-12.59,-16.21].map(v => v > 0 ? 'rgba(0,184,148,0.7)' : v < 0 ? 'rgba(214,48,49,0.7)' : 'rgba(200,200,200,0.2)'),
+      borderWidth: 0
+    }]
+  },
+  options: {
+    responsive: true, maintainAspectRatio: false,
+    plugins: { legend: { display: false }, title: { display: true, text: '化工板块涨跌停个股(%) — 含涨停原因标注' } },
+    scales: { y: { grid: { color: '#eee' } } }
+  }
+});
+</script>
+</body>
+</html>
